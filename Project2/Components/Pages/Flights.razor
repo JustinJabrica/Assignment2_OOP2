@@ -1,0 +1,92 @@
+﻿@page "/flights"
+@using Microsoft.Maui.Storage
+@using System.IO
+@using System.Text.Json
+
+<div style="text-align:center">
+	<h1>Flight Finder </h1>
+
+	<style>
+		button {
+			background-color:blue;
+			color: white;
+			border-radius: 5px;
+		}
+
+		p.ex1 {
+			outline: 1px solid black;
+			border-radius: 2.5px
+		}
+
+		input{
+			max-width: auto;
+		}
+	</style>
+
+	<p>
+		<body>To:</body> <input placeholder="Any"/>
+		<body>From:</body> <input placeholder="Any"/>
+		<body>Day:</body> <input placeholder="Any" />
+		<button @onclick="Search">Find Flights</button>
+	</p>
+
+	<h5>
+		Flights
+	</h5>
+	
+
+	<p class="ex1"> Loading...</p> @* change this to display the searched parameters *@
+
+	<h1>Reserve</h1>
+</div>
+
+
+<div class="flex-column">
+	<h5>Flight code:</h5>
+	<div class="ex2">
+		<input placeholder="Any" /> @*Figure out how to stretch to with of page later*@
+	</div>
+	<h5>Airline:</h5>
+	<div class="ex2">
+		<input placeholder="Any" /> @*Figure out how to stretch to with of page later*@
+	</div>
+	<h5>Day:</h5>
+	<div class="ex2">
+		<input placeholder="Any" /> @*Figure out how to stretch to with of page later*@
+	</div>
+	<h5>Time:</h5>
+	<div class="ex2">
+		<input placeholder="Any" /> @*Figure out how to stretch to with of page later*@
+	</div>
+	<h5>Cost</h5>
+	<div class="ex2">
+		<input placeholder="Any" /> @*This is an increase in cost, cannot be typed it, system will auto fill*@
+	</div>
+	<h5>Name:</h5>
+	<div class="ex2">
+		<input placeholder="Any" /> @*Figure out how to stretch to with of page later*@
+	</div>
+	<h5>Citizenship:</h5>
+	<div class="ex2">
+		<input placeholder="Any" /> @*Figure out how to stretch to with of page later*@
+	</div>
+</div>
+
+<div style="text-align:center">
+	<button @onclick="Book_Reservation">Reserve</button> @*Resize to large dimentions*@
+</div>
+
+
+
+@code 
+{
+	private void Search()
+	{
+		//insert the code needed for search funtions here
+	}
+
+	private void Book_Reservation()
+	{
+		//insert the reservation code here
+	}
+}
